@@ -26,9 +26,6 @@ import Tag from "primevue/tag";
 import Card from "primevue/card";
 import FileUpload from "primevue/fileupload";
 import IconField from "primevue/iconfield";
-import ToastService from "primevue/toastservice";
-import DialogService from "primevue/dialogservice";
-import ConfirmationService from "primevue/confirmationservice";
 import InputIcon from "primevue/inputicon";
 import InputNumber from "primevue/inputnumber";
 import FloatLabel from "primevue/floatlabel";
@@ -36,10 +33,15 @@ import Checkbox from "primevue/checkbox";
 import Rating from "primevue/rating";
 
 //PrimeVue Services
+import ToastService from "primevue/toastservice";
+import DialogService from "primevue/dialogservice";
+import ConfirmationService from "primevue/confirmationservice";
+import router from "./router/index.js";
 
 //PrimeVue Components
 
 createApp(App)
+    .use(router)
     .use(PrimeVue, {ripple: true})
     .use(ToastService)
     .use(DialogService)
